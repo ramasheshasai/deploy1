@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 text-gray-800 font-sans;
+}
+
+.app {
+  @apply max-w-7xl mx-auto p-6 bg-white shadow-xl rounded-lg;
+}
+
+header h1 {
+  @apply text-5xl font-extrabold text-blue-600 mb-6 animate-fadeIn;
+}
+
+.form-section h2,
+.table-section h2,
+.metrics-section h2,
+.chart-section h2 {
+  @apply text-3xl font-bold text-blue-500 mb-4;
+}
+
+input,
+select {
+  @apply block w-full border border-gray-300 rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 mb-4;
+}
+
+button {
+  @apply inline-flex items-center justify-center px-4 py-2 text-white font-bold rounded-md shadow transition-transform duration-200 ease-in-out transform hover:scale-105;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700;
+}
+
+.btn-danger {
+  @apply bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700;
+}
+
+.table {
+  @apply w-full border-collapse border border-gray-300 text-left text-sm;
+}
+
+.table th {
+  @apply bg-blue-100 text-blue-600 px-4 py-2 border-b uppercase tracking-wide;
+}
+
+.table td {
+  @apply px-4 py-2 border-b text-gray-700;
+}
+
+.metrics-section p {
+  @apply text-lg font-medium text-gray-600;
+}
+
+.metrics-section ul li {
+  @apply text-gray-800 mb-2;
+}
+
+.chart-section {
+  @apply bg-white shadow-md rounded-lg p-4;
+}
+
+footer p {
+  @apply mt-6 text-lg font-semibold text-gray-800 text-center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}
